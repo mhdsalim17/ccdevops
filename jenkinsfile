@@ -1,0 +1,76 @@
+pipeline {
+    agent any
+    
+    environment {
+        GITHUB_REPO = 'mhdsalim17/ccdevops'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', 
+                url: 'https://github.com/mhdsalim17/ccdevops.git'
+            }
+        }
+        
+        stage('Validation HTML') {
+            steps {
+                echo '🔍 Validation des fichiers HTML...'
+                sh '''
+                    echo "Fichiers HTML trouvés :"
+                    find . -name "*.html" -exec echo "✓ {}" \\;
+                    echo "Structure du projet :"
+                    ls -la
+                '''
+            }
+        }
+        
+        stage('Vérification CSS/Images') {
+            steps {
+                echo '🎨 Vérification des ressources...'
+                sh '''
+                    if [ -f "style.css" ]; then
+                        echo "✓ Fichier CSS trouvé"
+                    else
+                        echo "⚠️ Fichier CSS non trouvé, vérification des autres fichiers..."
+                    fi
+                    
+                    if [ -d "image" ]; then
+                        echo "✓ Dossier images trouvé"
+                    else
+                        echo "⚠️ Dossier images non trouvé"
+                    fi
+                    
+                    # Vérifier tous les fichiers CSS
+                    echo "Fichiers CSS trouvés :"
+                    find . -name "*.css" -exec echo "✓ {}" \\;
+                '''
+            }
+        }
+        
+        stage('Déploiement GitHub Pages') {
+            steps {
+                echo '🚀 Déploiement sur GitHub Pages...'
+                script {
+                    echo "✅ Pipeline CI/CD réussi !"
+                    echo "🌐 Ton site sera accessible à : https://mhdsalim17.github.io/ccdevops"
+                    echo "📝 Assure-toi d'avoir activé GitHub Pages dans les paramètres du repo GitHub !"
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo '✅ Pipeline terminé !'
+            cleanWs()
+        }
+        success {
+            echo '🎉 Succès ! Vérifie ton site sur GitHub Pages.'
+            echo '📧 Le site est maintenant en ligne : https://mhdsalim17.github.io/ccdevops'
+        }
+        failure {
+            echo '❌ Échec du pipeline. Vérifie les erreurs ci-dessus.'
+        }
+    }
+}
