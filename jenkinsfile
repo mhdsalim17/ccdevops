@@ -74,7 +74,7 @@ pipeline {
             echo '❌ Échec du pipeline. Vérifie les erreurs ci-dessus.'
         }
     }
-=======
+
 pipeline {
     agent any
     
