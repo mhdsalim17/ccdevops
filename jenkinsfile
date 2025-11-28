@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 pipeline {
     agent any
     
@@ -150,5 +150,5 @@ pipeline {
             echo '❌ Échec du pipeline. Vérifie les erreurs ci-dessus.'
         }
     }
->>>>>>> 65e1def430ed52f3617686ef81ba3b94100df7a1
+
 }
