@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -193,4 +194,201 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mohamed Salim Sali</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Competences.html">
+    <link rel="stylesheet" href="projets.html">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="profile-img-container" id="profile-img">
+                <img src="image/WhatsApp Image 2025-11-19 à 12.54.42_599ef971.jpg"  alt="Mohamed Salim Sali" class="profile-img">
+            </div>
+            <h1>Mohamed Salim Sali</h1>
+            <p class="tagline">Étudiant en Réseau & Cybersécurité</p>
+            <a href="#contact" class="btn">Me contacter</a>
+        </div>
+    </header>
+
+    <!-- Modal pour la photo de profil -->
+    <div id="profile-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="container">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="Competences.html">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis Mohamed Salim Sali. Actuellement en Bachelor 3 à Keyce informatique et intelligence artificielle, je me spécialise dans les domaines de réseau et de la cybersécurité.</p>
+                    <p>Passionné par les nouvelles technologies et l'innovation, je cherche constamment à approfondir mes connaissances et à développer mes compétences dans ces domaines en pleine expansion.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-calendar-alt"></i> <strong>Date de naissance:</strong> 17 septembre 2005</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Lieu de naissance:</strong> Garoua</li>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>Formation:</strong> Bachelor 3(Réseau & Sécurité) à Keyce informatique et intelligence artificielle</li>
+                        <li><i class="fas fa-language"></i> <strong>Langues:</strong> Français, Anglais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    
+
+    <!-- Projects Section -->
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>mohamedsalimsali84@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+237 659 41 49 62 </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Cameroun-Douala</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <h3>CV</h3>
+                            <p><a href="#" style="color: var(--secondary);">Télécharger mon CV</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Mohamed Salim Sali</h3>
+            <p>Étudiant en Réseau & Cybersécurité</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2023 Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('fade-in');
+                    }
+                });
+            };
+            
+            // Vérifier la position au chargement
+            fadeInOnScroll();
+            
+            // Vérifier la position au défilement
+            window.addEventListener('scroll', fadeInOnScroll);
+            
+           
+
+            // Modal pour la photo de profil
+            const modal = document.getElementById("profile-modal");
+            const profileImg = document.getElementById("profile-img");
+            const modalImg = document.getElementById("modal-img");
+            const closeBtn = document.querySelector(".close");
+
+            profileImg.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.querySelector('img').src;
+            });
+
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Formulaire de contact
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Merci pour votre message! Je vous répondrai dans les plus brefs délais.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+>>>>>>> 65e1def430ed52f3617686ef81ba3b94100df7a1
 </html>
